@@ -1,0 +1,70 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+  
+    body {
+      height: 100vh;
+      background: #f58700;
+	  background: linear-gradient(0deg,rgba(245, 135, 0, 1) 0%, rgba(13, 3, 3, 1) 52%, rgba(67, 11, 163, 1) 100%);
+      overflow: hidden;
+      font-family: 'Creepster', cursive;
+      color: #ff7518;
+      text-align: center;
+    }
+
+    
+    h1 {
+      font-size: 4em;
+      margin-top: 15vh;
+      text-shadow: 0 0 20px #ff7518, 0 0 40px #ff7518;
+      animation: flicker 2s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.4;
+      }
+    }
+
+    
+    .pumpkin {
+      font-size: 100px;
+      animation: glow 1.5s infinite alternate;
+      margin-top: 30px;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff7518, 0 0 15px #ff7518; }
+      to { text-shadow: 0 0 20px #ff7518, 0 0 40px #ff7518; }
+    }
+
+    
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 1em;
+      color: #ffb347;
+      text-shadow: 0 0 10px #ff7518;
+    }
+	
+	  .cat-image {
+      display: block;
+      margin: 30px auto 0 auto;
+      width: 350px;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 20px rgba(255, 117, 24, 0.4))
+              brightness(0.9);
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .cat-image:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 30px #ff7518) brightness(1.1);
+    }
